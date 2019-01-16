@@ -1,7 +1,7 @@
 let rankTransporter = {
     
     run: (creep) => {
-        let dumbledore = new RoomPosition(27, 19, Game.spawns['Humlepromenaden'].room.name)
+        let dumbledore = new RoomPosition(26, 18, Game.spawns['Humlepromenaden'].room.name)
         if (creep.carry.energy < creep.carryCapacity) {
             var energySource = parseInt(creep.name.substring(creep.name.length - 3, creep.name.length - 1)) % 2;
             var sources = creep.room.find(FIND_SOURCES);
