@@ -15,7 +15,7 @@ let facilitySpawner = {
             if (abs.length < 3) return 'abs';
             if (upgraders.length < 1) return 'upg';
             if (owls.length < 6) return 'owl';
-            if (upgraders.length < 3) return 'upg';
+            if (upgraders.length < 4) return 'upg';
             return null;
         };
 
@@ -46,7 +46,9 @@ let facilitySpawner = {
             //console.log('Spawning: ' + type);
         }    
         
-        spawnSoldier(whatToSpawn());
+        if (!Game.spawns['Humlepromenaden'].spawning) {
+            spawnSoldier(whatToSpawn());
+        }
     }
 }
 

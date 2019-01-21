@@ -1,9 +1,11 @@
+let initScript = require('initiationScript');
 let rankAbomination = require('rank.Abomination');
 let rankUpgrader = require('rank.Upgrader');
 let rankTransporter = require('rank.Transporter');
 let facilitySpawner = require('facility.Spawner');
 
 module.exports.loop = function () {
+    initScript();
     var creep = Game.creeps['Adam'];
     
     facilitySpawner.run()
